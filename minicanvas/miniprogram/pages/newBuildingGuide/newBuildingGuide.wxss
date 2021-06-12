@@ -1,0 +1,3 @@
+/* pages/newBuildingGuide/newBuildingGuide.wxss */
+
+@import "../../style/guide.wxss";

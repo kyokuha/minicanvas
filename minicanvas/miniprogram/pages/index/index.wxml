@@ -34,6 +34,14 @@
   </view>
 
 
+  <!-- 国网兴安供电公司新生产综合楼 -->
+  <view class="uploader">
+    <navigator url="../newBuildingGuide/newBuildingGuide" open-type="navigate" class="uploader-text">
+      <text>国网兴安供电公司新生产综合楼</text>
+    </navigator>
+  </view>
+
+
   <!-- 上传图片 -->
   <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">

@@ -1,0 +1,37 @@
+<!--pages/newBuildingGuide/newBuildingGuide.wxml-->
+<view class="container">
+
+<view class="list">
+  <view class="list-item" bindtap="testFunction">
+    <text>10F 建设部 发展策划部 党委组织部 廉洁教育展厅 企业文化展厅 党员之家</text>
+  </view>
+  <view class="list-item">
+    <text>9F 党委办公室 财务资产部 会计核心中心</text>
+  </view>
+  <view class="list-item">
+    <text>8F 党委党建部</text>
+  </view>
+  <view class="list-item">
+    <text>7F 安全监察部 运检技术部 电力调度控制中心</text>
+  </view>
+  <view class="list-item">
+    <text>6F 审计部 物资供应中心 市场营销部</text>
+  </view>
+  <view class="list-item">
+    <text>5F 配电网 综合服务中心 多媒体教室</text>
+  </view>
+  <view class="list-item">
+    <text>4F 活动室 职工书屋 档案室</text>
+  </view>
+  <view class="list-item">
+    <text>3F 信息通信分公司 信调大厅 会议室</text>
+  </view>
+  <view class="list-item">
+    <text>2F 应急指挥中心 供电服务指挥大厅 会议室 电力调度控制中心大厅</text>
+  </view>
+  <view class="list-item">
+    <text>1F 视频监控大厅 物业服务 营销服务大厅</text>
+  </view>
+</view>
+
+</view>
