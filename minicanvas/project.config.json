@@ -39,6 +39,9 @@
   "appid": "wx190b160348160218",
   "projectname": "minicanvas",
   "libVersion": "2.14.1",
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
   "condition": {
     "search": {
       "list": []

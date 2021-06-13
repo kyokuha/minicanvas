@@ -1,0 +1,10 @@
+<template name="rooms">
+  <scroll-view scroll-y="true" class="scroll">
+  <block wx:for="{{roomsInfo}}" wx:for-item="singleRoom" wx:key="singleRoom.roomNum">
+    <view bindtap="tapName" data-src="true">{{singleRoom.roomNum}}</view>
+    <view bindtap="tapName" data-src="false">{{singleRoom.roomName}}</view>
+    <view bindtap="tapName" data-src="false">{{singleRoom.roomFunc}}</view>
+  </block>
+  </scroll-view>
+
+</template>

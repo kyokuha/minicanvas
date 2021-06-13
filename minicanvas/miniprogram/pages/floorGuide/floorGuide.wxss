@@ -1,0 +1,30 @@
+.mbarea {
+  width: 650rpx;
+  height: 400rpx;
+  margin: 50rpx;
+  background-color: brown;
+  overflow: hidden;
+}
+
+.mbview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800rpx;
+  height: 500rpx;
+  background-color: chartreuse;
+}
+
+.mapics {
+  width: 1000rpx;
+  height: 1000rpx;
+  right: 0;
+  bottom: 0;
+}
+
+.scroll {
+  width: 650rpx;
+  height: 400rpx;
+  margin: 50rpx;
+  background-color: cornflowerblue;
+}
