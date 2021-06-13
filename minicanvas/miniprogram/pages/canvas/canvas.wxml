@@ -1,0 +1,4 @@
+<!--miniprogram/pages/canvas/canvas.wxml-->
+<text>miniprogram/pages/canvas/canvas.wxml</text>
+<canvas type="2d" id="myCanvas"></canvas>
+<canvas type="webgl" id="myCanvas1"></canvas>

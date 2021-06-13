@@ -1,3 +1,55 @@
 /* pages/newBuildingGuide/newBuildingGuide.wxss */
 
 @import "../../style/guide.wxss";
+
+.list {
+  margin-top: 40rpx;
+  height: auto;
+  width: 100%;
+  background: #fff;
+  padding: 0 40rpx;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-left: none;
+  border-right: none;
+  transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.list-item {
+  width: 100%;
+  padding: 0;
+  line-height: 104rpx;
+  font-size: 34rpx;
+  color: #007aff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.request-text {
+  color: #007aff;
+  padding: 1000 1000 1000 1000;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  word-break: break-all;
+}
+
+.col-no {
+  width:20ex;
+  height: auto;
+  float:left;
+  display:inline;
+}
+
+.col-text {
+  width: 40ex;
+  height: auto;
+  float: left;
+  display:inline;
+}

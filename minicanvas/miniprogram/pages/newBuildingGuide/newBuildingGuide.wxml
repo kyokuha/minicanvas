@@ -3,7 +3,14 @@
 
 <view class="list">
   <view class="list-item" bindtap="testFunction">
-    <text>10F 建设部 发展策划部 党委组织部 廉洁教育展厅 企业文化展厅 党员之家</text>
+    <navigator url="../canvas/canvas" open-type="navigate">
+      <view class="col-no">
+        <text>10F</text>
+      </view>
+      <view class="col-text">
+        <text>建设部 发展策划部 党委组织部 廉洁教育展厅 企业文化展厅 党员之家</text>
+      </view>
+    </navigator>
   </view>
   <view class="list-item">
     <text>9F 党委办公室 财务资产部 会计核心中心</text>
