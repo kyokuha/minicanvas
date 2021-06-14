@@ -1,0 +1,11 @@
+<template name="map">
+  <view>
+    <!-- 这里用到了index -->
+    <text>{{title}}</text>
+    <movable-area class="mbarea">
+      <movable-view x="{{x}}" y="{{y}}" direction="all" class="mbview">
+      <image class="mapics" src="{{floorPicArray}}" mode="aspectFill"></image>
+      </movable-view>
+    </movable-area>
+  </view>
+</template>

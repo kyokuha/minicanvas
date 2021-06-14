@@ -1,0 +1,9 @@
+<import src="../floorGuide/content/indoorMap/map.wxml"></import>
+<import src="../floorGuide/content/roomsGrid/rooms.wxml"></import>
+
+
+<!-- <template is="map" data="{{...stdInfo[0], ...{x: x, y: y}}}"></template> -->
+
+
+<template is="map" data="{{...stdInfo[0], ...{x: x, y: y} }}"></template>
+<template is="rooms" data="{{...roomdata}}"></template>
