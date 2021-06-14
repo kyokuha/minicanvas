@@ -2,17 +2,19 @@
 <view class="container">
 
 <view class="list">
-  <view class="list-item" bindtap="testFunction">
+  <view class="list-item-f" bindtap="testFunction">
     <navigator url="../canvas/canvas" open-type="navigate">
-      <view class="col-no">
-        <text>10F</text>
-      </view>
-      <view class="col-text">
-        <text>建设部 发展策划部 党委组织部 廉洁教育展厅 企业文化展厅 党员之家</text>
+      <view class="layout_horizontal">
+        <view class="col-no border">
+          <text>10F</text>
+        </view>
+        <view class="col-text">
+          <text>建设部 发展策划部 党委组织部 廉洁教育展厅 企业文化展厅 党员之家</text>
+        </view>
       </view>
     </navigator>
   </view>
-  <view class="list-item">
+  <view class="list-item-f">
     <text>9F 党委办公室 财务资产部 会计核心中心</text>
   </view>
   <view class="list-item">
@@ -37,7 +39,9 @@
     <text>2F 应急指挥中心 供电服务指挥大厅 会议室 电力调度控制中心大厅</text>
   </view>
   <view class="list-item">
-    <text>1F 视频监控大厅 物业服务 营销服务大厅</text>
+    <navigator url="../floorGuide/floorGuide" open-type="navigate">
+      <text>1F 视频监控大厅 物业服务 营销服务大厅</text>
+    </navigator>
   </view>
 </view>
 
