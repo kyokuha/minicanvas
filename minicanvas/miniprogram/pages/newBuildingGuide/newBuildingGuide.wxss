@@ -1,3 +1,54 @@
 /* pages/newBuildingGuide/newBuildingGuide.wxss */
 
 @import "../../style/guide.wxss";
+
+.col-no {
+  width:10%;
+  border: 1px black;
+}
+
+.col-text {
+  flex:1;
+  width:90%;
+}
+
+.border {
+	border: 1px solid #333;
+}
+
+.list-item-f {
+  width: 100%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 34rpx;
+  color: #007aff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/*横向布局  */
+.layout_horizontal{
+  height: 100rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: row;
+}
+
+/*纵向布局  */
+.layout_vertical{
+  height: 100rpx;
+  display: flex;
+  /*row 横向  column 列表  */
+  flex-direction: column;
+}
+
+/*划线  */
+.line {
+   background-color: blue;
+   height: 2rpx;
+   width: 100%;
+}

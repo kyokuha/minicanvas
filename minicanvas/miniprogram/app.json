@@ -2,6 +2,7 @@
   "pages": [
     "pages/floorIndex/floorIndex",
     "pages/floorGuide/floorGuide",
+    "pages/canvas/canvas",
     "pages/newBuildingGuide/newBuildingGuide"
   ],
   "window": {
