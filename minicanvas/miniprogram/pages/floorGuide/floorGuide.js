@@ -1,76 +1,138 @@
 
 let config = {
-    tapName(e) {
-      console.warn('......[Tap]', e.target.dataset.src)
-      let ans = e.target.dataset.src
-      if (ans === "true") {
-        console.warn('true here')
-        this.setData({
-          x: -500,
-          y: -500,
-        })
-      } else {
-        console.warn('false here')
-        this.setData({
-          x: 0,
-          y: 0,
-        })
-      }
-
-    },
+  onLoad: function (options) {
+    // Do some initialize when page load.
+  },
+  onShow: function () {
+    // Do something when page show.
+  },
+  onReady: function () {
+    // Do something when page ready.
+  },
+  onHide: function () {
+    // Do something when page hide.
+  },
+  onUnload: function () {
+    // Do something when page close.
+  },
+  onPullDownRefresh: function () {
+    // Do something when pull down.
+  },
+  onReachBottom: function () {
+    // Do something when page reach bottom.
+  },
+  onShareAppMessage: function () {
+    // return custom share data when user share.
+  },
+  onPageScroll: function () {
+    // Do something when page scroll
+  },
+  onResize: function () {
+    // Do something when page resize
+  },
+  tapName(e) {
+    // this.tapZoom()
+    console.warn(this.data.scale)
+    let idx = e.currentTarget.dataset.src
+    console.warn('......[ans]', idx)
+    console.warn('.....asdsad', this)
+    let newX = this.data.roomdata.roomsInfo[idx].roomFunc.x
+    let newY = this.data.roomdata.roomsInfo[idx].roomFunc.y
+    this.setData({
+      onBrowsing: true,
+      x: newX,
+      y: newY,
+    })
+  },
+  tapZoom(param) {
+    if (param) {
+      this.setData({
+        scale: 1
+      })
+    } else {
+      this.setData({
+        scale: 2
+      })
+    }
+  },
   data: {
-    x: 0,
-    y: 0,
+    scale: 2,
+    onBrowsing: false,
     stdInfo: [
       {
         name: "lostexin",
         age: 21,
         gender: "m",
         title: "1F楼层题目导航",
-        floorPicArray: "../../assets/1F.png"
+        floorPicArray: "../../assets/2F.png"
       },
     ],
     roomdata: {
       roomsInfo: [
         {
-          roomNum: 1,
-          roomName: "科长室",
-          roomFunc: "科长日常工作办公室"
+          roomNum: "0101",
+          roomName: "门卫室",
+          roomFunc: { x: 170, y: -65 }
         },
         {
-          roomNum: 2,
-          roomName: "阅览室",
-          roomFunc: "日常文献编纂阅览工作室"
+          roomNum: "0102",
+          roomName: "视频监控大厅",
+          roomFunc: { x: 170, y: -100 }
         },
         {
-          roomNum: 3,
-          roomName: "会議室",
-          roomFunc: "定例会議を行う室"
+          roomNum: "0103",
+          roomName: "物业办公室",
+          roomFunc: { x: 170, y: -150 }
+        },
+        // {
+        //   roomNum: 0105,
+        //   roomName: "司机办公室",
+        //   roomFunc: ""
+        // },
+        {
+          roomNum: "0105",
+          roomName: "司机办公室",
+          roomFunc: { x: 0, y: -150 }
         },
         {
-          roomNum: 4,
-          roomName: "会議室",
-          roomFunc: "定例会議を行う室"
+          roomNum: "0106",
+          roomName: "司机办公室",
+          roomFunc: { x: -100, y: -150 }
         },
         {
-          roomNum: 5,
-          roomName: "会議室",
-          roomFunc: "定例会議を行う室"
+          roomNum: "0107",
+          roomName: "安防控制室",
+          roomFunc: { x: -200, y: -150 }
         },
         {
-          roomNum: 6,
-          roomName: "会議室",
-          roomFunc: "定例会議を行う室"
+          roomNum: "0108",
+          roomName: "自动化电池室",
+          roomFunc: { x: -300, y: -150 }
         },
         {
-          roomNum: 7,
-          roomName: "会議室",
-          roomFunc: "定例会議を行う室"
+          roomNum: "0109",
+          roomName: "自动化机房2",
+          roomFunc: { x: -400, y: -150 }
         },
         {
-          roomNum: 8,
-          roomName: "会議室",
-          roomFunc: "定例会議を行う室"
+          roomNum: "0110",
+          roomName: "营销服务大厅",
+          roomFunc: { x: -400, y: -100 }
+        },
+        {
+          roomNum: "0111",
+          roomName: "自动化机房1",
+          roomFunc: { x: -400, y: -65 }
+        },
+        {
+          roomNum: "0112",
+          roomName: "自动化UPS室",
+          roomFunc: { x: -400, y: -65 }
+        },
+        {
+          roomNum: "0113",
+          roomName: "消防控制室",
+          roomFunc: { x: -400, y: -65 }
         },
       ]
     },

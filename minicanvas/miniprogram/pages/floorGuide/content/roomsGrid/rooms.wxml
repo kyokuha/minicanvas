@@ -1,10 +1,16 @@
 <template name="rooms">
-  <scroll-view scroll-y="true" class="scroll">
-  <block wx:for="{{roomsInfo}}" wx:for-item="singleRoom" wx:key="singleRoom.roomNum">
-    <view bindtap="tapName" data-src="true">{{singleRoom.roomNum}}</view>
-    <view bindtap="tapName" data-src="false">{{singleRoom.roomName}}</view>
-    <view bindtap="tapName" data-src="false">{{singleRoom.roomFunc}}</view>
-  </block>
-  </scroll-view>
-
+  <view class="room-list">
+    <scroll-view scroll-y="true" class="room-list-scroll">
+      <block wx:for="{{roomsInfo}}" wx:for-item="singleRoom" wx:for-index="in" wx:key="singleRoom.roomNum">
+        <view class="block-item" bindtap="tapName" data-src="{{in}}">
+          <view>
+            <view class="rooms">{{singleRoom.roomNum}}</view>
+            <view class='rooms-underline'></view>
+          </view>
+          <view class="rooms">{{singleRoom.roomName}}</view>
+        </view>
+        <!-- <view bindtap="tapName" data-src="false">{{singleRoom.roomFunc}}</view> -->
+      </block>
+    </scroll-view>
+  </view>
 </template>

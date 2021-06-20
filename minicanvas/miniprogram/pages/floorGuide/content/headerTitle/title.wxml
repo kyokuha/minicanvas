@@ -1,0 +1,7 @@
+<template name="title">
+  <view class="floor-title">
+    <!-- <text>{{roomsInfo[0].roomNum}}层\n{{roomsInfo[0].roomName}}・{{roomsInfo[0].roomFunc}}</text> -->
+    <text>1层\n视频监控大厅 物业服务 营销服务大厅</text>
+
+  </view>
+</template>

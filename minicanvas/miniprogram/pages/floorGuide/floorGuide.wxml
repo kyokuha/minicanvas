@@ -1,9 +1,13 @@
+<import src="../floorGuide/content/headerTitle/title.wxml"></import>
 <import src="../floorGuide/content/indoorMap/map.wxml"></import>
 <import src="../floorGuide/content/roomsGrid/rooms.wxml"></import>
-
+<import src="../floorGuide/content/roomsGrid/roomDetails.wxml"></import>
 
 <!-- <template is="map" data="{{...stdInfo[0], ...{x: x, y: y}}}"></template> -->
 
-
-<template is="map" data="{{...stdInfo[0], ...{x: x, y: y} }}"></template>
-<template is="rooms" data="{{...roomdata}}"></template>
+<view class="container">
+  <template is="title" data="{{...roomdata}}"></template>
+  <template is="roomDetails"></template>
+  <template is="map" data="{{...stdInfo[0], ...{x: x, y: y, scale: scale, imgWD: imgWD, imgHG: imgHG, onBrowsing: onBrowsing} }}"></template>
+  <template is="rooms" data="{{...roomdata}}"></template>
+</view>

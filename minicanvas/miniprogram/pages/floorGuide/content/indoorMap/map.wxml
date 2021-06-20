@@ -1,11 +1,17 @@
 <template name="map">
-  <view>
+  <view class="map-pic">
     <!-- 这里用到了index -->
-    <text>{{title}}</text>
-    <movable-area class="mbarea">
-      <movable-view x="{{x}}" y="{{y}}" direction="all" class="mbview">
-      <image class="mapics" src="{{floorPicArray}}" mode="aspectFill"></image>
-      </movable-view>
-    </movable-area>
+    <image class="mvb-area" src="{{floorPicArray}}" mode="aspectFit" wx:if="{{!onBrowsing}}">
+    </image>
+      <movable-area class="mvb-area" wx:else>
+        <movable-view class="mvb-view" x="{{x}}" y="{{y}}" direction="all" out-of-bounds="true" scale scale-min="1"
+          scale-value="{{scale}}">
+          <image class="map-image" src="{{floorPicArray}}" mode="aspectFit"></image>
+        </movable-view>
+      </movable-area>
+
+    <!-- <canvas class='img' type="2d" style="width: {{width2}}px; height: {{height2}}px;" canvas-id='canvas'
+      catchtouchstart="touchstartCallback" catchtouchmove="touchmoveCallback" catchtouchend="touchendCallback">
+    </canvas> -->
   </view>
 </template>

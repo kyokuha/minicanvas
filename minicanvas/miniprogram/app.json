@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/floorIndex/floorIndex",
     "pages/floorGuide/floorGuide",
     "pages/newBuildingGuide/newBuildingGuide"
   ],

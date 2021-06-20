@@ -1,0 +1,54 @@
+.page-body {
+  height: 95vh; 
+  width: 95vw;
+  position: relative;
+  /* border: 2rpx solid red; */
+}
+.index-background {
+  height: 100%;
+  width: 100%;
+}
+.floor-index {
+  width: 700rpx;
+  height: 700rpx;  
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  /* background: yellowgreen; */
+}
+.scroll-index {
+  height: 100%;
+  width: 100%;
+}
+.block-item {
+  display: inline-block;
+  opacity: 1;
+  transform: translateY(200rpx);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.block-item {
+  display: flex;
+  margin: 10rpx;
+  flex-direction: row;
+  font-family: serif;
+  font-size: large;
+  border-style: double solid;
+  border-left-width: thin;
+  border-right-width: thin;
+}
+.rooms {
+  font-size: 20rpx;
+  margin: 5rpx 50rpx;
+  font-weight: bold;
+  color: #2e6d68;
+}
+
+.rooms-underline {
+  width: 40%;
+  border-bottom: 10rpx solid #2e6d68;
+}

@@ -1,0 +1,20 @@
+<view class="container">
+  <view class="page-body">
+    <image src="../../assets/indexBg.jpg" class="index-background" mode="scaleToFill">
+    </image>
+    <view class="floor-index">
+      <block wx:for="{{floorsIndex}}" wx:for-item="singleFloor" wx:for-index="idx" wx:key="floorNum">
+        <view class="block-item" bindtap="tapName" data-src="{{idx}}" animation="{{animeList[idx]}}">
+          <!-- <view class="block-item" bindtap="tapName" data-src="{{in}}"> -->
+          <view>
+            <view class="rooms">{{singleFloor.floorNum}}</view>
+            <view class='rooms-underline'></view>
+          </view>
+          <label wx:for="{{singleFloor.floorInfo}}" wx:for-item="info" class="rooms">
+          <text>{{info.floorName}}</text>
+        </label>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
