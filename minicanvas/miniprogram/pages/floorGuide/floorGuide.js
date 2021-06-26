@@ -1,17 +1,39 @@
 
 let config = {
+  data: {
+    anime: '',
+    scale: 1.5,
+    onBrowsing: false,
+    firstRoom: '',
+  },
   onLoad: function (options) {
     // Do some initialize when page load.
+    let jsonGuide = ''
+    let jsonIndex = ''
+    if (options) {
+      jsonIndex = indexJson.floorsIndexJson[options.floor_num]
+      switch (options.floor_num) {
+        case '0':
+          jsonGuide = guideJson.floorsOneGuide
+          break
+        case '1':
+          jsonGuide = guideJson.floorsTwoGuide
+          break
+        case '2':
+          jsonGuide = guideJson.floorsTreGuide
+          break
+      }
+    }
+    this.setData({
+      roomsInfo: jsonGuide,
+      indexInfo: jsonIndex
+    })
   },
   onShow: function () {
     // Do something when page show.
   },
   onReady: function () {
     // Do something when page ready.
-    this.data.roomdata.roomsInfo.map(e => {
-      this.sliderightshow(this, -150, 1)
-      this.sleep(100)
-    })
   },
   onHide: function () {
     // Do something when page hide.
@@ -35,131 +57,39 @@ let config = {
     // Do something when page resize
   },
   tapName(e) {
-    // this.tapZoom()
-    console.warn(this.data.scale)
+    if (!this.data.onBrowsing) {
+      this.showScaleBtn(true)
+      this.setData({
+        onBrowsing: true,
+      })
+    }
     let idx = e.currentTarget.dataset.src
-    console.warn('......[ans]', idx)
-    console.warn('.....asdsad', this)
-    let newX = this.data.roomdata.roomsInfo[idx].roomFunc.x
-    let newY = this.data.roomdata.roomsInfo[idx].roomFunc.y
+    let newX = this.data.roomsInfo[idx].Coordinate.x
+    let newY = this.data.roomsInfo[idx].Coordinate.y
     this.setData({
-      onBrowsing: true,
       // scale: 5,
       x: newX,
       y: newY,
     })
   },
-  tapZoom(param) {
-    if (param) {
-      this.setData({
-        scale: 1
-      })
-    } else {
-      this.setData({
-        scale: 2
-      })
-    }
-  },
-  data: {
-    animeList: [],
-    scale: 1,
-    onBrowsing: false,
-    stdInfo: [
-      {
-        name: "lostexin",
-        age: 21,
-        gender: "m",
-        title: "1F楼层题目导航",
-        floorPicArray: "../../assets/2F.png"
-      },
-    ],
-    roomdata: {
-      roomsInfo: [
-        {
-          roomNum: "0101",
-          roomName: "门卫室",
-          roomFunc: { x: -70, y: 0 }
-        },
-        {
-          roomNum: "0102",
-          roomName: "视频监控大厅",
-          roomFunc: { x: -300, y: 0 }
-        },
-        {
-          roomNum: "0103",
-          roomName: "物业办公室",
-          roomFunc: { x: -400, y: 0 }
-        },
-        // {
-        //   roomNum: 0105,
-        //   roomName: "司机办公室",
-        //   roomFunc: ""
-        // },
-        {
-          roomNum: "0105",
-          roomName: "司机办公室",
-          roomFunc: { x: -500, y: 0 }
-        },
-        {
-          roomNum: "0106",
-          roomName: "司机办公室",
-          roomFunc: { x: -600, y: 0 }
-        },
-        {
-          roomNum: "0107",
-          roomName: "安防控制室",
-          roomFunc: { x: -700, y: 0 }
-        },
-        {
-          roomNum: "0108",
-          roomName: "自动化电池室",
-          roomFunc: { x: -800, y: 0 }
-        },
-        {
-          roomNum: "0109",
-          roomName: "自动化机房2",
-          roomFunc: { x: -900, y: 0 }
-        },
-        {
-          roomNum: "0110",
-          roomName: "营销服务大厅",
-          roomFunc: { x: -1000, y: 0 }
-        },
-        {
-          roomNum: "0111",
-          roomName: "自动化机房1",
-          roomFunc: { x: -1100, y: 0 }
-        },
-        {
-          roomNum: "0112",
-          roomName: "自动化UPS室",
-          roomFunc: { x: -1200, y: 0 }
-        },
-        {
-          roomNum: "0113",
-          roomName: "消防控制室",
-          roomFunc: { x: -1300, y: 0 }
-        },
-      ]
-    },
-  },
-  sliderightshow: function (that, px, opacity) {
+  showScaleBtn: function (state) {
+    let that = this
     var animation = wx.createAnimation({
-     duration: 800,
-     timingFunction: 'ease',
+      duration: 800,
+      timingFunction: 'ease',
     });
-
-    animation.translateX(px).opacity(opacity).step()
-    let newArray = that.data.animeList
+    if (state) {
+      animation.height('50rpx').backgroundColor('#808A87').step()
+    } else {
+      animation.height('0rpx').backgroundColor('#FFFFFF').step()
+    }
     let animeItem = animation.export()
-    newArray.push(animeItem)
-
     that.setData({
-      animeList: newArray
+      anime: animeItem
     })
     //设置动画
-   },
-   sleep: function (numberMillis) {
+  },
+  sleep: function (numberMillis) {
     var now = new Date();
     var exitTime = now.getTime() + numberMillis;
     while (true) {
@@ -167,7 +97,19 @@ let config = {
       if (now.getTime() > exitTime)
         return;
     }
+  },
+  scaleZoomOut() {
+    this.showScaleBtn(false)
+    this.setData({
+      x: '0rpx',
+      y: '0rpx',
+      onBrowsing: false,
+      firstRoom: 'first_room'
+    })
+
   }
 }
 
-Page(config)
+var indexJson = require('../../data/floorIndex')
+var guideJson = require('../../data/floorGuide')
+Page(config)  

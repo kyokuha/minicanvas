@@ -1,7 +1,15 @@
 <template name="title">
   <view class="floor-title">
-    <!-- <text>{{roomsInfo[0].roomNum}}层\n{{roomsInfo[0].roomName}}・{{roomsInfo[0].roomFunc}}</text> -->
-    <text>1层\n视频监控大厅 物业服务 营销服务大厅</text>
-
+    <text>{{floorNum}}层</text>
+    <block wx:for="{{floorInfo}}" wx:for-item="singleRoom" wx:for-index="in" wx:key="singleRoom.subfloorNum">
+      <text>{{singleRoom.floorName}}</text>
+    </block>
+    <!-- <text>1层\n视频监控大厅 物业服务 营销服务大厅</text> -->
+  </view>
+  <!-- <view class="scale-button" bindtap="scaleZoomOut" wx:if="{{onBrowsing}}" > -->
+    <view class="scale-button" bindtap="scaleZoomOut" animation="{{anime}}">
+    <div>
+      当前为放大模式：点击缩放
+    </div>
   </view>
 </template>

@@ -1,72 +1,14 @@
 let config = {
   data: {
     animeList: [],
-    floorsIndex: [
-      {
-        floorNum: 1,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "视频监控大厅 物业服务  营销服务大厅" },
-          { subfloorNum: 2, floorName: "电力调度控制中心大厅" }
-        ]
-      },
-      {
-        floorNum: 2,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "应急指挥中心 供电服务指挥大厅 会议室" }
-        ],
-      },
-      {
-        floorNum: 3,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "信息通信分公司 信调大厅 会议室" }]
-      },
-      {
-        floorNum: 4,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "活动室 职工书屋 档案室" }
-        ]
-      },
-      {
-        floorNum: 5,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "配电网 综合服务中心 多媒体教室" }
-        ]
-      },
-      {
-        floorNum: 6,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "审计部 物资供应中心 市场营销部" }
-        ]
-      },
-      {
-        floorNum: 7,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "安全监察部 运检技术部 电力调度控制中心" }
-        ]
-      },
-      {
-        floorNum: 8,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "党委党建部 纪委" }
-        ]
-      },
-      {
-        floorNum: 9,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "党委办公室 财务资产部 会计核算中心" },
-          { subfloorNum: 2, floorName: "廉洁教育展厅 企业文化展厅 党员之家" }
-        ]
-      },
-      {
-        floorNum: 10,
-        floorInfo: [
-          { subfloorNum: 1, floorName: "建设部 发展策划部 党委组织部" }
-        ]
-      },
-    ],
+
   },
   onLoad: function (options) {
     // Do some initialize when page load.
+    this.setData ({
+      floorsIndex: indexJson.floorsIndexJson
+    })
+    console.warn('......[]', this.data.floorsIndex)
   },
   onShow: function () {
     // Do something when page show.
@@ -128,7 +70,8 @@ let config = {
   tapName(e) {
     // this.tapZoom()
     console.warn(e.currentTarget.dataset)
-    let fl = e.currentTarget.dataset
+    let fl = e.currentTarget.dataset.src
+    console.warn('......[TEST FL]', fl)
     let targetURL = '../floorGuide/floorGuide?floor_num=' + fl
     wx.navigateTo({
       url: targetURL,
@@ -136,4 +79,5 @@ let config = {
   },
 }
 
+var indexJson = require('../../data/floorIndex')
 Page(config)

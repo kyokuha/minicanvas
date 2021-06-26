@@ -33,13 +33,13 @@
 
 .block-item {
   display: flex;
-  margin: 10rpx;
+  margin-top: 50rpx;
   flex-direction: row;
   font-family: serif;
-  font-size: large;
   border-style: double solid;
   border-left-width: thin;
   border-right-width: thin;
+  height: 70rpx;
 }
 .rooms {
   font-size: 20rpx;

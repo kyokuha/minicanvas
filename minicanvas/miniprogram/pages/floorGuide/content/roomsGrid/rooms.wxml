@@ -1,16 +1,27 @@
 <template name="rooms">
   <view class="room-list">
-    <scroll-view scroll-y="true" class="room-list-scroll">
+    <scroll-view scroll-x="true" class="room-list-scroll" scroll-with-animation="true" scroll-into-view="{{firstRoom}}">
       <block wx:for="{{roomsInfo}}" wx:for-item="singleRoom" wx:for-index="in" wx:key="singleRoom.roomNum">
-        <view class="block-item" bindtap="tapName" data-src="{{in}}" animation="{{animeList[in]}}">
-          <view>
-            <view class="rooms">{{singleRoom.roomNum}}</view>
-            <view class='rooms-underline'></view>
+        <!-- <view class="block-item" bindtap="tapName" data-src="{{in}}" animation="{{animeList[in]}}"> -->
+        <view class="block-item" bindtap="tapName" data-src="{{in}}" id="{{ in == 0 ? 'first_room' : ''}}">
+        <view>
+          <view style="display: flex">
+            <view class="rooms-title">{{singleRoom.roomNum}}</view>
+            <view class="rooms-title">{{singleRoom.roomName}}</view>
           </view>
-          <view class="rooms">{{singleRoom.roomName}}</view>
+          <view class='rooms-underline'></view>
         </view>
-        <!-- <view bindtap="tapName" data-src="false">{{singleRoom.roomFunc}}</view> -->
-      </block>
-    </scroll-view>
+        <view>
+          <view>
+            <view class="rooms-title">科室主管：{{singleRoom.roomDetails.admin}}</view>
+            <view class="rooms-title">科室电话：{{singleRoom.roomDetails.del}}</view>
+            <view class="rooms-title">科室业务：{{singleRoom.roomDetails.info}}</view>
+
+          </view>
+        </view>
+  </view>
+  <!-- <view bindtap="tapName" data-src="false">{{singleRoom.roomFunc}}</view> -->
+  </block>
+  </scroll-view>
   </view>
 </template>

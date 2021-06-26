@@ -1,7 +1,7 @@
 {
-  "navigationBarBackgroundColor": "#ffffff",
-  "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "国家电网兴安供电公司办公区域指南",
+  "navigationBarBackgroundColor": "#2e6d68",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "国家电网兴安供电办公区域指南",
   "backgroundColor": "#eeeeee",
   "backgroundTextStyle": "light"
 }
