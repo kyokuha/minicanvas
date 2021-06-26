@@ -4,7 +4,8 @@
     <image class="mvb-area" src="{{floorPicArray}}" mode="aspectFit" wx:if="{{!onBrowsing}}">
     </image>
       <movable-area class="mvb-area" wx:else>
-        <movable-view class="mvb-view" x="{{x}}" y="{{y}}" direction="all" out-of-bounds="true" scale scale-min="1"
+        <!-- <movable-area class="mvb-area"> -->
+        <movable-view class="mvb-view" x="{{x}}" y="{{y}}" direction="horizontal" out-of-bounds="true" scale scale-min="1"
           scale-value="{{scale}}">
           <image class="map-image" src="{{floorPicArray}}" mode="aspectFit"></image>
         </movable-view>

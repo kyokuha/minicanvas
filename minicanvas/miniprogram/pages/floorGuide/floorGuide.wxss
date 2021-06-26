@@ -1,8 +1,7 @@
 .mvb-area {
   width: 750rpx;
-  height: 400rpx;
+  height: 80vh;
   margin: 30rpx;
-  height: 30vh;
   /* background-color: brown; */
   overflow: hidden;
 }
@@ -11,9 +10,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* width: 5587px;
-  height: 1867rpx; */
-  width: 100%;
+  width: 2900rpx;
+  /*height: 1867rpx; */
+  /* width: 100%; */
   height: 100%;
   /* background-color: chartreuse; */
   /* border: 9px double black; */
@@ -28,23 +27,24 @@
   display: flex;
   justify-content: center;
   width: 750rpx;
-  margin-top: 20rpx;
   background-color: rgb(255, 255, 255);
 }
 
 .room-list {
-  display: flex;
-  justify-content: center;
-  height: 40vh;
+  position: absolute;
+  height: 30vh;
   width: 750rpx;
   margin: 40rpx;
+  bottom: 75rpx;
+  right: 0rpx;
+  display: flex;
+  justify-content: flex-end
+  ;
 }
 
 .room-list-scroll {
   width: 100%;
-  height: auto;
-  padding: 35rpx;
-  margin: 0rpx 30rpx;
+  height: 100%;
 }
 
 .floor-title {
@@ -53,18 +53,21 @@
   height: 100rpx;
   padding: 25rpx 0 30rpx;
   color: white;
-  background-color: #333333;
+  background-color: #2e6d68;
 }
 
 .block-item {
+  width: 400rpx;
+  float: right;
   display: flex;
-  margin: 10rpx;
+  margin: 5rpx;
   flex-direction: row;
   font-family: serif;
-  font-size: large;
+  font-size: x-small;
   border-style: double solid;
   border-left-width: thin;
   border-right-width: thin;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .rooms {

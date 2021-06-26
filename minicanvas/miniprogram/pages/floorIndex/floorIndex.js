@@ -103,7 +103,7 @@ let config = {
     console.warn('......[run once]')
     var that = this
     var animation = wx.createAnimation({
-      duration: 1200,
+      duration: 800,
       timingFunction: 'ease',
     });
     animation.translateY(px).opacity(opacity).step()
