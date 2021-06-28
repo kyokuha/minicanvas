@@ -2,13 +2,13 @@
   <view class="map-pic">
     <movable-area class="mvb-area" wx:if="{{!onBrowsing}}">
       <movable-view class="fake-class" style="width: 750rpx; height: 80vh" direction="all" out-of-bounds="true" scale
-        scale-value="1">
+        scale-value="1" inertia="true">
         <image class="map-image" src="{{floorMap}}" mode="aspectFit"></image>
       </movable-view>
     </movable-area>
     <movable-area class="mvb-area" wx:else>
       <!-- <movable-area class="mvb-area"> -->
-      <movable-view class="mvb-view" x="{{x}}" y="{{y}}" direction="all" out-of-bounds="true" scale scale-min="1"
+      <movable-view class="mvb-view" x="{{x}}" y="{{y}}" direction="all" out-of-bounds="true" scale-min="0.5"
         scale-max="1.5" scale-value="{{scale}}">
         <!-- <span class="locate-icon mr-20"></span> -->
         <image class="map-image" src="{{floorMap}}" mode="aspectFit"></image>

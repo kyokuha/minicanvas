@@ -14,7 +14,7 @@
 
   /* width: 750rpx; */
   /* width: 100%; */
-  height: 100%;
+  height: 150%;
   /* background-color: chartreuse; */
   /* border: 9px double black; */
 }
@@ -35,7 +35,7 @@
   position: absolute;
   /* height: 30vh; */
   width: 700rpx;
-  height: 250rpx;
+  height: 300rpx;
   margin-top: 25rpx;
   bottom: 75rpx;
   right: 0rpx;
@@ -51,6 +51,8 @@
 }
 
 .floor-title {
+  font-family: serif;
+  font-size: 30rpx;
   text-align: center;
   width: 750rpx;
   height: 100rpx;
@@ -63,7 +65,7 @@
 
 .block-item {
   width: 600rpx;
-  height: 200rpx;
+  height: 250rpx;
   /* float: right; */
   /* display: flex; */
   display: inline-block;
@@ -74,7 +76,7 @@
   /* border-style: double solid; */
   /* border-left-width: thin;
   border-right-width: thin; */
-  border-radius: 30rpx;
+  border-radius: 15rpx;
   background-color: rgba(221, 221, 221, 0.7);
 }
 

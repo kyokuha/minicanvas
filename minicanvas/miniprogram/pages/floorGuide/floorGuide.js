@@ -2,7 +2,8 @@
 let config = {
   data: {
     anime: '',
-    scale: 1.5,
+    animeZoom: '',
+    scale: 1,
     onBrowsing: false,
     firstRoom: '',
   },
@@ -25,6 +26,7 @@ let config = {
       }
     }
     this.setData({
+      // scale: 1,
       roomsInfo: jsonGuide,
       indexInfo: jsonIndex
     })
@@ -67,7 +69,7 @@ let config = {
     let newX = this.data.roomsInfo[idx].Coordinate.x
     let newY = this.data.roomsInfo[idx].Coordinate.y
     this.setData({
-      // scale: 5,
+      // handleScale: 3,
       x: newX,
       y: newY,
     })
@@ -106,8 +108,16 @@ let config = {
       onBrowsing: false,
       firstRoom: 'first_room'
     })
+  },
+  scaleAnime: function (param) {
+    var animation = wx.createAnimation({
+      duration: 800,
+      timingFunction: 'ease',
+    });
 
-  }
+    animation.scale(param).step()
+    this.setData({animeZoom: animation.export()})
+  },
 }
 
 var indexJson = require('../../data/floorIndex')

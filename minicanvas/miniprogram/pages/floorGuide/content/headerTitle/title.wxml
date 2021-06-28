@@ -8,8 +8,8 @@
   </view>
   <!-- <view class="scale-button" bindtap="scaleZoomOut" wx:if="{{onBrowsing}}" > -->
     <view class="scale-button" bindtap="scaleZoomOut" animation="{{anime}}">
-    <div>
-      当前为放大模式：点击缩放
+    <div style="font-family: serif; font-size: 30rpx;">
+      当前为地图导览模式：点击返回手动缩放
     </div>
   </view>
 </template>

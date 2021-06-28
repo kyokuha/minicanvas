@@ -1,6 +1,6 @@
 <view class="container">
   <view class="page-body">
-    <image src="../../assets/indexBg.jpg" class="index-background" mode="scaleToFill">
+    <image src="../../assets/indexBg.jpeg" class="index-background" mode="aspectFill">
     </image>
     <view class="floor-index">
       <block wx:for="{{floorsIndex}}" wx:for-item="singleFloor" wx:for-index="idx" wx:key="floorNum">
