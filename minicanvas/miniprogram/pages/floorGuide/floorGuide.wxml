@@ -7,6 +7,6 @@
 
 <view class="container">
   <template is="title" data="{{...indexInfo, ...{onBrowsing: onBrowsing, anime: anime} }}"></template>
-  <template is="map" data="{{...indexInfo, ...{x: x, y: y, scale: scale, onBrowsing: onBrowsing} }}"></template>
+  <template is="map" data="{{...indexInfo, ...{x: x, y: y, scale: scale, scalehandle: scalehandle,  onBrowsing: onBrowsing} }}"></template>
   <template is="rooms" data="{{...{roomsInfo: roomsInfo, animeList: animeList, firstRoom: firstRoom} }}"></template>
 </view>

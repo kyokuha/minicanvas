@@ -104,14 +104,22 @@
   text-align: center;
 }
 
+.map-image-handle {
+  width: 400%;
+  height: 400%;
+  transform: translate3d(0, 0, 0) scale(0.25, 0.25);
+  transform-origin: left top;
+}
 .locate-icon {
   position: absolute;
   display: inline-block;
-  bottom: 150rpx;
   width: 55rpx;
   height: 55rpx;
   border-radius: 50%;
   background-color: #06c;
+  z-index: 999;
+  bottom: 600rpx;
+  left: 300rpx;
 }
 
 .locate-icon::after {

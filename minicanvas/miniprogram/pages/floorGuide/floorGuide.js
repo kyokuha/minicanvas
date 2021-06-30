@@ -6,6 +6,7 @@ let config = {
     scale: 1,
     onBrowsing: false,
     firstRoom: '',
+    scalehandle: 2,
   },
   onLoad: function (options) {
     // Do some initialize when page load.
@@ -26,7 +27,7 @@ let config = {
       }
     }
     this.setData({
-      // scale: 1,
+      scalehandle: 1,
       roomsInfo: jsonGuide,
       indexInfo: jsonIndex
     })
@@ -103,6 +104,7 @@ let config = {
   scaleZoomOut() {
     this.showScaleBtn(false)
     this.setData({
+      scalehandle: 2,
       x: '0rpx',
       y: '0rpx',
       onBrowsing: false,

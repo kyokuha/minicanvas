@@ -240,7 +240,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-1200rpx', y: '-400rpx' }
+    Coordinate: { x: '-1300rpx', y: '-400rpx' }
   },
   {
     roomNum: "0219",
@@ -251,7 +251,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-1600rpx', y: '-400rpx' }
+    Coordinate: { x: '-1700rpx', y: '-400rpx' }
   },
   {
     roomNum: "0220",
@@ -262,7 +262,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-1700rpx', y: '-400rpx' }
+    Coordinate: { x: '-1800rpx', y: '-400rpx' }
   },
   {
     roomNum: "0221",
@@ -284,7 +284,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-2000rpx', y: '-400rpx' }
+    Coordinate: { x: '-2050rpx', y: '-400rpx' }
   },
   {
     roomNum: "0223",
@@ -295,7 +295,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-2000rpx', y: '0rpx' }
+    Coordinate: { x: '-2000rpx', y: '-100rpx' }
   },
   {
     roomNum: "0225",
@@ -306,7 +306,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-2100rpx', y: '0rpx' }
+    Coordinate: { x: '-2300rpx', y: '0rpx' }
   },
   {
     roomNum: "0226",
@@ -317,7 +317,7 @@ var floorsTwoGuide = [
       del: '080-1234-5678',
       info: '内勤，安保，访问登记'
     },
-    Coordinate: { x: '-2200rpx', y: '0rpx' }
+    Coordinate: { x: '-2500rpx', y: '0rpx' }
   },
   {
     roomNum: "0227",
