@@ -20,8 +20,8 @@
 }
 
 .map-image {
-  width: 100%;
-  height: 100%;
+  width: 2900rpx;
+  height: 800rpx;
 }
 
 .map-pic {
@@ -111,15 +111,15 @@
   transform-origin: left top;
 }
 .locate-icon {
-  position: absolute;
+  position: relative;
   display: inline-block;
   width: 55rpx;
   height: 55rpx;
   border-radius: 50%;
   background-color: #06c;
   z-index: 999;
-  bottom: 600rpx;
-  left: 300rpx;
+  left: 1000rpx;
+  bottom: 1000rpx;
 }
 
 .locate-icon::after {

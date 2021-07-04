@@ -1,18 +1,20 @@
 <template name="map">
   <view class="map-pic">
     <movable-area class="mvb-area" wx:if="{{!onBrowsing}}">
-      <movable-view class="fake-class" style="width: 750rpx; height: 80vh" direction="all" out-of-bounds="true" scale scale-max="2"
-        scale-value="{{scalehandle}}" inertia="true" x="-380rpx" y="-800rpx">
+      <movable-view class="fake-class" style="width: 750rpx; height: 80vh" direction="all" out-of-bounds="true" scale scale-max="3" scale-min="1"
+        scale-value="{{scalehandle}}" inertia="true" x="-800rpx" y="-1300rpx">
         <image class="map-image-handle" src="{{floorMap}}" mode="aspectFit"></image>
       </movable-view>
     </movable-area>
     <movable-area class="mvb-area" wx:else>
       <!-- <movable-area class="mvb-area"> -->
-      <view class="locate-icon"></view>
       <movable-view class="mvb-view" x="{{x}}" y="{{y}}" direction="all" out-of-bounds="true" scale-min="0.5"
         scale-max="1.5" scale-value="{{scale}}">
         <!-- <span class="locate-icon mr-20"></span> -->
-        <image class="map-image" src="{{floorMap}}" mode="aspectFit"></image>
+        <image class="map-image" src="{{floorMap}}" mode="aspectFit">
+         <view class="locate-icon" animation="{{pinAnime}}"></view>
+         <!-- <view class="locate-icon" style="left: 450rpx; bottom: 200rpx"></view> -->
+      </image>
       </movable-view>
     </movable-area>
 

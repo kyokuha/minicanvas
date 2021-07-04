@@ -2,11 +2,13 @@
 let config = {
   data: {
     anime: '',
-    animeZoom: '',
+    pinAnime: '',
     scale: 1,
     onBrowsing: false,
     firstRoom: '',
-    scalehandle: 2,
+    scalehandle: 3,
+    pinleft: 0,
+    pinbottom: 0
   },
   onLoad: function (options) {
     // Do some initialize when page load.
@@ -69,11 +71,16 @@ let config = {
     let idx = e.currentTarget.dataset.src
     let newX = this.data.roomsInfo[idx].Coordinate.x
     let newY = this.data.roomsInfo[idx].Coordinate.y
+    let pinL = this.data.roomsInfo[idx].pinCoordinate.left
+    let pinB = this.data.roomsInfo[idx].pinCoordinate.bottom
     this.setData({
       // handleScale: 3,
       x: newX,
       y: newY,
+      pinleft: pinL,
+      pinbottom: pinB
     })
+    this.pinInAnimation()
   },
   showScaleBtn: function (state) {
     let that = this
@@ -104,21 +111,25 @@ let config = {
   scaleZoomOut() {
     this.showScaleBtn(false)
     this.setData({
-      scalehandle: 2,
+      scalehandle: 3,
       x: '0rpx',
       y: '0rpx',
       onBrowsing: false,
       firstRoom: 'first_room'
     })
+    this.sleep(100)
+    this.setData({
+      scalehandle: 1,
+    })
   },
-  scaleAnime: function (param) {
+  pinInAnimation: function () {
     var animation = wx.createAnimation({
       duration: 800,
       timingFunction: 'ease',
     });
 
-    animation.scale(param).step()
-    this.setData({animeZoom: animation.export()})
+    animation.bottom(this.data.pinbottom).left(this.data.pinleft).step()
+    this.setData({pinAnime: animation.export()})
   },
 }
 
